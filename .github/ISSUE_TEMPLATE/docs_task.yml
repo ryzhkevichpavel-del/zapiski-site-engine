@@ -1,0 +1,26 @@
+name: Documentation task
+description: Improve setup, maintenance, or safety documentation.
+title: "[Docs]: "
+labels: ["docs"]
+body:
+  - type: textarea
+    id: page
+    attributes:
+      label: What should be documented?
+      description: Point to the confusing area or missing guide.
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Desired reader outcome
+      description: What should a maintainer or user be able to do after reading it?
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety check
+      options:
+        - label: This request does not require publishing private production data.
+          required: true

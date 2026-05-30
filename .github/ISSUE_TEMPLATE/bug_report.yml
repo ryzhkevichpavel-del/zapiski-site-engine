@@ -1,0 +1,37 @@
+name: Bug report
+description: Report a reproducible problem in the public site engine.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please do not include real production data, secrets, user uploads, or private server paths.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Describe the visible problem.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: List the shortest safe reproduction.
+      placeholder: |
+        1. Start the local server
+        2. Open ...
+        3. Click ...
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+      placeholder: v0.1.0 or commit SHA
+  - type: textarea
+    id: notes
+    attributes:
+      label: Safe notes
+      description: Add logs or screenshots only if they do not contain private data.
