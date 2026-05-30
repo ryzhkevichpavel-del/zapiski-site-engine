@@ -1,0 +1,47 @@
+:root{
+  color-scheme: dark;
+  --bg:#030806;
+  --bg-2:#061411;
+  --surface:rgba(5,22,18,.78);
+  --surface-2:rgba(8,30,25,.84);
+  --surface-3:rgba(11,40,33,.72);
+  --surface-glass:rgba(6,20,17,.58);
+  --ink:#f4ead9;
+  --ink-2:#d8cdbb;
+  --muted:#a79b88;
+  --gold:#c99743;
+  --gold-2:#f0ce76;
+  --gold-3:#8b6227;
+  --ember:#e77822;
+  --blood:#7e211d;
+  --line:rgba(202,154,65,.24);
+  --line-strong:rgba(240,206,118,.52);
+  --shadow:0 14px 34px rgba(0,0,0,.24);
+  --radius-xl:28px;
+  --radius-lg:22px;
+  --radius-md:16px;
+  --radius-sm:12px;
+  --serif:Georgia,"Times New Roman",serif;
+  --sans:Inter,Segoe UI,Roboto,Arial,sans-serif;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{min-height:100%;background:var(--bg)}
+body{min-height:100%;margin:0;font-family:var(--sans);font-size:16px;line-height:1.6;color:var(--ink);background:var(--bg);overflow-x:hidden}
+body.modal-open{overflow:hidden}
+button,input,textarea,select{font:inherit;color:inherit}
+select{color-scheme:dark}
+select option,
+select optgroup{
+  background:#061411;
+  color:#f4ead9;
+}
+button{cursor:pointer}
+button:disabled{cursor:not-allowed;opacity:.46}
+a{color:inherit;text-decoration:none}
+::selection{background:rgba(232,151,55,.32);color:var(--ink)}
+.atmosphere{position:fixed;inset:0;z-index:-4;overflow:hidden;pointer-events:none;background:radial-gradient(circle at 50% 0%,rgba(21,65,53,.32),transparent 42%),linear-gradient(180deg,#020504,#06110e 56%,#020504)}
+.deep-bg{position:absolute;inset:0;background-image:linear-gradient(180deg,rgba(2,7,6,.2),rgba(2,7,6,.82)),url('../ember-threads.webp');background-size:cover;background-position:50% 50%;opacity:.72}
+.grain{position:absolute;inset:0;opacity:.05;background-image:radial-gradient(rgba(255,255,255,.18) 1px,transparent 1px);background-size:4px 4px}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}
+.shell{position:relative;z-index:1;width:100%;max-width:1920px;margin:0 auto;padding:0 0 42px}

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Логотип Записки чернокнижника">
+  <title>Логотип «Записки чернокнижника»</title>
+  <desc>Прозрачный векторный знак: золотой круговой символ с центральным глазом, компасной геометрией и оккультной орнаментикой.</desc>
+  <defs>
+    <style>
+      :root { color: #D6A64A; }
+      .line { stroke: currentColor; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+      .mid { stroke: currentColor; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+      .fine { stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; opacity: .9; }
+      .fine-stroke { stroke-width: 2; }
+      .fill-thin { fill: currentColor; }
+      .fill-soft { fill: currentColor; fill-opacity: .08; }
+      .pupil { fill: currentColor; }
+    </style>
+  </defs>
+
+  <g id="zapiski-chernoknizhnika-logomark" transform="translate(0 0)">
+    <!-- Outer mandala -->
+    <circle class="line" cx="256" cy="256" r="192"/>
+    <circle class="fine" cx="256" cy="256" r="176"/>
+    <circle class="mid" cx="256" cy="256" r="148"/>
+    <circle class="fine" cx="256" cy="256" r="108"/>
+    <circle class="fine" cx="256" cy="256" r="88" stroke-dasharray="2 10"/>
+    <circle class="fine" cx="256" cy="256" r="132" stroke-dasharray="16 12"/>
+    <g opacity=".75">
+      <circle class="fill-thin" cx="437.00" cy="256.00" r="1.25"/><circle class="fill-thin" cx="436.01" cy="274.92" r="1.25"/><circle class="fill-thin" cx="433.04" cy="293.63" r="1.25"/><circle class="fill-thin" cx="428.14" cy="311.93" r="1.25"/><circle class="fill-thin" cx="421.35" cy="329.62" r="1.25"/><circle class="fill-thin" cx="412.75" cy="346.50" r="1.25"/><circle class="fill-thin" cx="402.43" cy="362.39" r="1.25"/><circle class="fill-thin" cx="390.51" cy="377.11" r="1.25"/><circle class="fill-thin" cx="377.11" cy="390.51" r="1.25"/><circle class="fill-thin" cx="362.39" cy="402.43" r="1.25"/><circle class="fill-thin" cx="346.50" cy="412.75" r="1.25"/><circle class="fill-thin" cx="329.62" cy="421.35" r="1.25"/><circle class="fill-thin" cx="311.93" cy="428.14" r="1.25"/><circle class="fill-thin" cx="293.63" cy="433.04" r="1.25"/><circle class="fill-thin" cx="274.92" cy="436.01" r="1.25"/><circle class="fill-thin" cx="256.00" cy="437.00" r="1.25"/><circle class="fill-thin" cx="237.08" cy="436.01" r="1.25"/><circle class="fill-thin" cx="218.37" cy="433.04" r="1.25"/><circle class="fill-thin" cx="200.07" cy="428.14" r="1.25"/><circle class="fill-thin" cx="182.38" cy="421.35" r="1.25"/><circle class="fill-thin" cx="165.50" cy="412.75" r="1.25"/><circle class="fill-thin" cx="149.61" cy="402.43" r="1.25"/><circle class="fill-thin" cx="134.89" cy="390.51" r="1.25"/><circle class="fill-thin" cx="121.49" cy="377.11" r="1.25"/><circle class="fill-thin" cx="109.57" cy="362.39" r="1.25"/><circle class="fill-thin" cx="99.25" cy="346.50" r="1.25"/><circle class="fill-thin" cx="90.65" cy="329.62" r="1.25"/><circle class="fill-thin" cx="83.86" cy="311.93" r="1.25"/><circle class="fill-thin" cx="78.96" cy="293.63" r="1.25"/><circle class="fill-thin" cx="75.99" cy="274.92" r="1.25"/><circle class="fill-thin" cx="75.00" cy="256.00" r="1.25"/><circle class="fill-thin" cx="75.99" cy="237.08" r="1.25"/><circle class="fill-thin" cx="78.96" cy="218.37" r="1.25"/><circle class="fill-thin" cx="83.86" cy="200.07" r="1.25"/><circle class="fill-thin" cx="90.65" cy="182.38" r="1.25"/><circle class="fill-thin" cx="99.25" cy="165.50" r="1.25"/><circle class="fill-thin" cx="109.57" cy="149.61" r="1.25"/><circle class="fill-thin" cx="121.49" cy="134.89" r="1.25"/><circle class="fill-thin" cx="134.89" cy="121.49" r="1.25"/><circle class="fill-thin" cx="149.61" cy="109.57" r="1.25"/><circle class="fill-thin" cx="165.50" cy="99.25" r="1.25"/><circle class="fill-thin" cx="182.38" cy="90.65" r="1.25"/><circle class="fill-thin" cx="200.07" cy="83.86" r="1.25"/><circle class="fill-thin" cx="218.37" cy="78.96" r="1.25"/><circle class="fill-thin" cx="237.08" cy="75.99" r="1.25"/><circle class="fill-thin" cx="256.00" cy="75.00" r="1.25"/><circle class="fill-thin" cx="274.92" cy="75.99" r="1.25"/><circle class="fill-thin" cx="293.63" cy="78.96" r="1.25"/><circle class="fill-thin" cx="311.93" cy="83.86" r="1.25"/><circle class="fill-thin" cx="329.62" cy="90.65" r="1.25"/><circle class="fill-thin" cx="346.50" cy="99.25" r="1.25"/><circle class="fill-thin" cx="362.39" cy="109.57" r="1.25"/><circle class="fill-thin" cx="377.11" cy="121.49" r="1.25"/><circle class="fill-thin" cx="390.51" cy="134.89" r="1.25"/><circle class="fill-thin" cx="402.43" cy="149.61" r="1.25"/><circle class="fill-thin" cx="412.75" cy="165.50" r="1.25"/><circle class="fill-thin" cx="421.35" cy="182.38" r="1.25"/><circle class="fill-thin" cx="428.14" cy="200.07" r="1.25"/><circle class="fill-thin" cx="433.04" cy="218.37" r="1.25"/><circle class="fill-thin" cx="436.01" cy="237.08" r="1.25"/>
+    </g>
+
+    <!-- Cardinal axes -->
+    <line class="mid" x1="68" y1="256" x2="444" y2="256"/>
+    <line class="mid" x1="256" y1="68" x2="256" y2="444"/>
+    <circle class="fill-thin" cx="256" cy="256" r="4"/>
+    <circle class="fill-thin" cx="132" cy="256" r="4"/>
+    <circle class="fill-thin" cx="380" cy="256" r="4"/>
+    <circle class="fill-thin" cx="256" cy="132" r="4"/>
+    <circle class="fill-thin" cx="256" cy="380" r="4"/>
+
+    <!-- Compass spikes -->
+    <path class="line fill-soft" d="M 374.09 374.09 L 301.96 316.10 L 316.10 301.96 Z"/><path class="line fill-soft" d="M 137.91 374.09 L 195.90 301.96 L 210.04 316.10 Z"/><path class="line fill-soft" d="M 137.91 137.91 L 210.04 195.90 L 195.90 210.04 Z"/><path class="line fill-soft" d="M 374.09 137.91 L 316.10 210.04 L 301.96 195.90 Z"/>
+    <path class="line fill-soft" d="M256 68 L244 112 L256 154 L268 112 Z"/>
+    <path class="line fill-soft" d="M256 444 L244 400 L256 358 L268 400 Z"/>
+    <path class="line fill-soft" d="M68 256 L112 244 L154 256 L112 268 Z"/>
+    <path class="line fill-soft" d="M444 256 L400 244 L358 256 L400 268 Z"/>
+
+    <!-- Ornamental finials -->
+    <path class="mid" d="M256 38 L250 52 L256 66 L262 52 Z"/>
+    <circle class="mid" cx="256" cy="76" r="8"/>
+    <path class="mid" d="M256 474 L250 460 L256 446 L262 460 Z"/>
+    <circle class="mid" cx="256" cy="436" r="8"/>
+    <path class="mid" d="M38 256 L52 250 L66 256 L52 262 Z"/>
+    <circle class="mid" cx="76" cy="256" r="8"/>
+    <path class="mid" d="M474 256 L460 250 L446 256 L460 262 Z"/>
+    <circle class="mid" cx="436" cy="256" r="8"/>
+
+    <!-- Secondary star nodes and small signs -->
+    <circle class="line" cx="256" cy="132" r="20"/><path class="fill-thin" d="M 256.00 118.00 L 257.53 128.30 L 265.90 122.10 L 259.70 130.47 L 270.00 132.00 L 259.70 133.53 L 265.90 141.90 L 257.53 135.70 L 256.00 146.00 L 254.47 135.70 L 246.10 141.90 L 252.30 133.53 L 242.00 132.00 L 252.30 130.47 L 246.10 122.10 L 254.47 128.30 Z"/><circle class="line" cx="380" cy="256" r="20"/><path class="fill-thin" d="M 380.00 242.00 L 381.53 252.30 L 389.90 246.10 L 383.70 254.47 L 394.00 256.00 L 383.70 257.53 L 389.90 265.90 L 381.53 259.70 L 380.00 270.00 L 378.47 259.70 L 370.10 265.90 L 376.30 257.53 L 366.00 256.00 L 376.30 254.47 L 370.10 246.10 L 378.47 252.30 Z"/><circle class="line" cx="256" cy="380" r="20"/><path class="fill-thin" d="M 256.00 366.00 L 257.53 376.30 L 265.90 370.10 L 259.70 378.47 L 270.00 380.00 L 259.70 381.53 L 265.90 389.90 L 257.53 383.70 L 256.00 394.00 L 254.47 383.70 L 246.10 389.90 L 252.30 381.53 L 242.00 380.00 L 252.30 378.47 L 246.10 370.10 L 254.47 376.30 Z"/><circle class="line" cx="132" cy="256" r="20"/><path class="fill-thin" d="M 132.00 242.00 L 133.53 252.30 L 141.90 246.10 L 135.70 254.47 L 146.00 256.00 L 135.70 257.53 L 141.90 265.90 L 133.53 259.70 L 132.00 270.00 L 130.47 259.70 L 122.10 265.90 L 128.30 257.53 L 118.00 256.00 L 128.30 254.47 L 122.10 246.10 L 130.47 252.30 Z"/>
+    <g opacity=".86">
+      <circle class="line fine-stroke" cx="384.03" cy="324.07" r="4.2"/><circle class="line fine-stroke" cx="345.27" cy="370.26" r="4.2"/><circle class="line fine-stroke" cx="166.73" cy="370.26" r="4.2"/><circle class="line fine-stroke" cx="127.97" cy="324.07" r="4.2"/><circle class="line fine-stroke" cx="127.97" cy="187.93" r="4.2"/><circle class="line fine-stroke" cx="166.73" cy="141.74" r="4.2"/><circle class="line fine-stroke" cx="345.27" cy="141.74" r="4.2"/><circle class="line fine-stroke" cx="384.03" cy="187.93" r="4.2"/><circle class="fill-thin" cx="375.83" cy="294.94" r="1.9"/><circle class="fill-thin" cx="294.94" cy="375.83" r="1.9"/><circle class="fill-thin" cx="217.06" cy="375.83" r="1.9"/><circle class="fill-thin" cx="136.17" cy="294.94" r="1.9"/><circle class="fill-thin" cx="136.17" cy="217.06" r="1.9"/><circle class="fill-thin" cx="217.06" cy="136.17" r="1.9"/><circle class="fill-thin" cx="294.94" cy="136.17" r="1.9"/><circle class="fill-thin" cx="375.83" cy="217.06" r="1.9"/><path class="fine" d="M 382.88 345.35 C 388.88 340.35, 394.88 346.35, 390.88 353.35"/><path class="fine" d="M 119.12 345.35 C 125.12 340.35, 131.12 346.35, 127.12 353.35"/><path class="fine" d="M 119.12 160.65 C 125.12 155.65, 131.12 161.65, 127.12 168.65"/><path class="fine" d="M 382.88 160.65 C 388.88 155.65, 394.88 161.65, 390.88 168.65"/>
+    </g>
+
+    <!-- Central sun and eye -->
+    <g id="central-eye">
+      <line class="fine" x1="314.00" y1="256.00" x2="332.00" y2="256.00"/><line class="fine" x1="313.12" y1="266.07" x2="330.85" y2="269.20"/><line class="fine" x1="310.50" y1="275.84" x2="327.42" y2="281.99"/><line class="fine" x1="306.23" y1="285.00" x2="321.82" y2="294.00"/><line class="fine" x1="300.43" y1="293.28" x2="314.22" y2="304.85"/><line class="fine" x1="293.28" y1="300.43" x2="304.85" y2="314.22"/><line class="fine" x1="285.00" y1="306.23" x2="294.00" y2="321.82"/><line class="fine" x1="275.84" y1="310.50" x2="281.99" y2="327.42"/><line class="fine" x1="266.07" y1="313.12" x2="269.20" y2="330.85"/><line class="fine" x1="256.00" y1="314.00" x2="256.00" y2="332.00"/><line class="fine" x1="245.93" y1="313.12" x2="242.80" y2="330.85"/><line class="fine" x1="236.16" y1="310.50" x2="230.01" y2="327.42"/><line class="fine" x1="227.00" y1="306.23" x2="218.00" y2="321.82"/><line class="fine" x1="218.72" y1="300.43" x2="207.15" y2="314.22"/><line class="fine" x1="211.57" y1="293.28" x2="197.78" y2="304.85"/><line class="fine" x1="205.77" y1="285.00" x2="190.18" y2="294.00"/><line class="fine" x1="201.50" y1="275.84" x2="184.58" y2="281.99"/><line class="fine" x1="198.88" y1="266.07" x2="181.15" y2="269.20"/><line class="fine" x1="198.00" y1="256.00" x2="180.00" y2="256.00"/><line class="fine" x1="198.88" y1="245.93" x2="181.15" y2="242.80"/><line class="fine" x1="201.50" y1="236.16" x2="184.58" y2="230.01"/><line class="fine" x1="205.77" y1="227.00" x2="190.18" y2="218.00"/><line class="fine" x1="211.57" y1="218.72" x2="197.78" y2="207.15"/><line class="fine" x1="218.72" y1="211.57" x2="207.15" y2="197.78"/><line class="fine" x1="227.00" y1="205.77" x2="218.00" y2="190.18"/><line class="fine" x1="236.16" y1="201.50" x2="230.01" y2="184.58"/><line class="fine" x1="245.93" y1="198.88" x2="242.80" y2="181.15"/><line class="fine" x1="256.00" y1="198.00" x2="256.00" y2="180.00"/><line class="fine" x1="266.07" y1="198.88" x2="269.20" y2="181.15"/><line class="fine" x1="275.84" y1="201.50" x2="281.99" y2="184.58"/><line class="fine" x1="285.00" y1="205.77" x2="294.00" y2="190.18"/><line class="fine" x1="293.28" y1="211.57" x2="304.85" y2="197.78"/><line class="fine" x1="300.43" y1="218.72" x2="314.22" y2="207.15"/><line class="fine" x1="306.23" y1="227.00" x2="321.82" y2="218.00"/><line class="fine" x1="310.50" y1="236.16" x2="327.42" y2="230.01"/><line class="fine" x1="313.12" y1="245.93" x2="330.85" y2="242.80"/>
+      <path class="line" d="M126 256 C162 211 210 192 256 192 C302 192 350 211 386 256 C350 301 302 320 256 320 C210 320 162 301 126 256 Z"/>
+      <path class="fine" d="M159 256 C188 226 220 213 256 213 C292 213 324 226 353 256 C324 286 292 299 256 299 C220 299 188 286 159 256 Z"/>
+      <circle class="mid" cx="256" cy="256" r="35"/>
+      <circle class="pupil" cx="256" cy="256" r="18"/>
+      <circle fill="#fff" opacity=".25" cx="248" cy="248" r="5"/>
+    </g>
+  </g>
+</svg>

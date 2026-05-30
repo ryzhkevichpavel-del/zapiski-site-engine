@@ -1,0 +1,38 @@
+[
+  {
+    "package": "@editorjs/editorjs",
+    "version": "2.31.6",
+    "file": "editorjs.umd.js",
+    "tarball": "https://registry.npmjs.org/@editorjs/editorjs/-/editorjs-2.31.6.tgz"
+  },
+  {
+    "package": "@editorjs/header",
+    "version": "2.8.8",
+    "file": "header.umd.js",
+    "tarball": "https://registry.npmjs.org/@editorjs/header/-/header-2.8.8.tgz"
+  },
+  {
+    "package": "@editorjs/list",
+    "version": "2.0.9",
+    "file": "list.umd.js",
+    "tarball": "https://registry.npmjs.org/@editorjs/list/-/list-2.0.9.tgz"
+  },
+  {
+    "package": "@editorjs/image",
+    "version": "2.10.3",
+    "file": "image.umd.js",
+    "tarball": "https://registry.npmjs.org/@editorjs/image/-/image-2.10.3.tgz"
+  },
+  {
+    "package": "@editorjs/quote",
+    "version": "2.7.6",
+    "file": "quote.umd.js",
+    "tarball": "https://registry.npmjs.org/@editorjs/quote/-/quote-2.7.6.tgz"
+  },
+  {
+    "package": "@editorjs/delimiter",
+    "version": "1.4.2",
+    "file": "delimiter.umd.js",
+    "tarball": "https://registry.npmjs.org/@editorjs/delimiter/-/delimiter-1.4.2.tgz"
+  }
+]

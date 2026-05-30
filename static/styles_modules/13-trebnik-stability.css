@@ -1,0 +1,1194 @@
+/* Требник: фиксируем уже принятый верх из разделов Дела, Клиенты и Апдейты. */
+@media (min-width:921px){
+  body[data-route="trebnik"],
+  body[data-route="trebnik"][data-trebnik-page="services"],
+  body[data-route="trebnik"][data-trebnik-page="payments"]{
+    overflow:hidden;
+  }
+  body[data-route="trebnik"] .site-header{
+    min-height:48px;
+    padding:3px clamp(18px,1.65vw,30px);
+  }
+  body[data-route="trebnik"] .shell,
+  body[data-route="trebnik"][data-trebnik-page="services"] .shell,
+  body[data-route="trebnik"][data-trebnik-page="payments"] .shell{
+    width:100%;
+    max-width:none;
+    height:100svh;
+    min-height:0;
+    padding:0;
+    overflow:hidden;
+  }
+  body[data-route="trebnik"] main,
+  body[data-route="trebnik"][data-trebnik-page="services"] main,
+  body[data-route="trebnik"][data-trebnik-page="payments"] main{
+    height:calc(100svh - 80px);
+    min-height:0;
+    padding:10px clamp(28px,2.45vw,48px) 18px;
+    overflow:hidden;
+  }
+  body[data-route="trebnik"] .admin-trebnik,
+  body[data-route="trebnik"][data-trebnik-page="services"] .admin-trebnik,
+  body[data-route="trebnik"][data-trebnik-page="payments"] .admin-trebnik{
+    width:100%;
+    height:100%;
+    min-height:0;
+    display:grid;
+    grid-template-rows:auto minmax(0,1fr);
+    gap:7px;
+  }
+  body[data-route="trebnik"] .admin-trebnik__topbar{
+    width:100%;
+    min-height:48px;
+    display:grid;
+    grid-template-columns:1fr;
+    align-items:center;
+    gap:8px;
+    overflow:visible;
+  }
+  body[data-route="trebnik"] .admin-trebnik .client-map,
+  body[data-route="trebnik"] .admin-trebnik .admin-trebnik__topbar .client-map,
+  body[data-route="trebnik"] .admin-trebnik .client-map.trebnik-nav-split,
+  body[data-route="trebnik"] .admin-trebnik .admin-trebnik__topbar .client-map.trebnik-nav-split{
+    width:100%;
+    min-width:0;
+    display:grid;
+    grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);
+    align-items:center;
+    justify-content:stretch;
+    gap:18px;
+    margin:0;
+    padding:0;
+    border:0;
+    background:transparent;
+    box-shadow:none;
+  }
+  body[data-route="trebnik"] .trebnik-nav-side{
+    min-width:0;
+    display:flex;
+    align-items:center;
+    gap:15px;
+  }
+  body[data-route="trebnik"] .trebnik-nav-side.is-left{justify-content:flex-end}
+  body[data-route="trebnik"] .trebnik-nav-side.is-right{justify-content:flex-start}
+  body[data-route="trebnik"] .trebnik-nav-title{
+    position:relative;
+    min-width:170px;
+    height:48px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:0 42px;
+    border:0;
+    border-radius:0;
+    background:radial-gradient(ellipse at 50% 100%,rgba(240,206,118,.18),rgba(240,206,118,.055) 38%,transparent 72%);
+    color:var(--ink);
+    font-family:var(--serif);
+    font-size:1.85rem;
+    font-weight:500;
+    line-height:1;
+    white-space:nowrap;
+    text-shadow:0 8px 18px rgba(240,206,118,.16);
+    box-shadow:0 14px 24px -22px rgba(240,206,118,.72);
+  }
+  body[data-route="trebnik"] .trebnik-nav-title::before,
+  body[data-route="trebnik"] .trebnik-nav-title::after{
+    content:"";
+    position:absolute;
+    top:50%;
+    width:5px;
+    height:5px;
+    border-radius:50%;
+    background:#ff5d50;
+    box-shadow:0 0 8px rgba(255,93,80,.5);
+    transform:translateY(-50%);
+  }
+  body[data-route="trebnik"] .trebnik-nav-title::before{left:16px}
+  body[data-route="trebnik"] .trebnik-nav-title::after{right:16px}
+  body[data-route="trebnik"] .trebnik-nav-title.is-live::before,
+  body[data-route="trebnik"] .trebnik-nav-title.is-live::after{
+    background:var(--gold-2);
+    box-shadow:0 0 8px rgba(240,206,118,.44);
+  }
+  body[data-route="trebnik"] .client-map .plain,
+  body[data-route="trebnik"] .client-map .plain.trebnik-nav-link{
+    position:relative;
+    min-height:32px;
+    height:32px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:7px;
+    padding:0 2px;
+    border:0;
+    border-radius:0;
+    background:transparent;
+    color:var(--ink-2);
+    font-size:.88rem;
+    font-weight:700;
+    line-height:1;
+  }
+  body[data-route="trebnik"] .client-map .plain:hover,
+  body[data-route="trebnik"] .client-map .plain.active{
+    border-color:transparent;
+    background:transparent;
+    color:var(--gold-2);
+  }
+  body[data-route="trebnik"] .client-map .plain::after{
+    content:"";
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:2px;
+    height:1px;
+    transform:scaleX(0);
+    transform-origin:center;
+    background:linear-gradient(90deg,transparent,rgba(240,206,118,.82),transparent);
+    transition:transform .16s ease;
+  }
+  body[data-route="trebnik"] .client-map .plain:hover::after,
+  body[data-route="trebnik"] .client-map .plain.active::after{
+    transform:scaleX(1);
+  }
+  body[data-route="trebnik"] .trebnik-ritebook,
+  body[data-route="trebnik"] .trebnik-finance{
+    height:100%;
+    min-height:0;
+    overflow:hidden;
+    padding-right:4px;
+    scrollbar-width:thin;
+  }
+  body[data-route="trebnik"] .trebnik-ritebook{
+    grid-template-rows:auto minmax(0,1fr);
+  }
+  body[data-route="trebnik"] .trebnik-finance{
+    grid-template-rows:auto minmax(0,1fr);
+  }
+}
+
+body[data-route="trebnik"] .trebnik-clients-overview{
+  min-height:100%;
+  display:grid;
+  grid-template-rows:auto auto minmax(0,1fr);
+  gap:14px;
+  padding:22px;
+  border:1px solid rgba(240,206,118,.22);
+  border-radius:10px;
+  background:linear-gradient(145deg,rgba(7,28,23,.78),rgba(3,14,12,.76));
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.03),0 14px 26px rgba(0,0,0,.14);
+}
+body[data-route="trebnik"] .trebnik-clients-overview header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+}
+body[data-route="trebnik"] .trebnik-clients-overview h2{
+  font-size:1.9rem;
+}
+body[data-route="trebnik"] .trebnik-client-overview-metrics{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:8px;
+}
+body[data-route="trebnik"] .trebnik-client-overview-list{
+  min-height:0;
+  display:grid;
+  grid-template-rows:auto minmax(0,1fr);
+  gap:8px;
+}
+body[data-route="trebnik"] .trebnik-client-overview-list h3{
+  font-size:1rem;
+}
+body[data-route="trebnik"] .trebnik-client-overview-list>div{
+  min-height:0;
+  display:grid;
+  align-content:start;
+  gap:7px;
+  overflow:auto;
+  scrollbar-width:thin;
+}
+body[data-route="trebnik"] .trebnik-client-overview-row{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  gap:10px;
+  align-items:center;
+  min-height:48px;
+  padding:10px 12px;
+  border:1px solid rgba(240,206,118,.15);
+  border-radius:8px;
+  background:rgba(5,20,17,.6);
+  color:inherit;
+  text-align:left;
+}
+body[data-route="trebnik"] .trebnik-client-overview-row:hover{
+  border-color:rgba(240,206,118,.45);
+  background:rgba(201,151,67,.08);
+}
+body[data-route="trebnik"] .trebnik-client-overview-row strong{
+  min-width:0;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+body[data-route="trebnik"] .trebnik-client-overview-row span{
+  color:var(--muted);
+  font-size:.84rem;
+  white-space:nowrap;
+}
+
+body[data-route="trebnik"] .trebnik-client-access{
+  margin-bottom:10px;
+}
+body[data-route="trebnik"] .trebnik-profile-link{
+  width:min(100%,720px);
+  min-width:0;
+  min-height:40px;
+  margin:0 0 10px;
+  padding:7px 9px 7px 11px;
+  gap:8px;
+  border-radius:8px;
+}
+body[data-route="trebnik"] .trebnik-profile-link__main{
+  gap:2px;
+}
+body[data-route="trebnik"] .trebnik-profile-link__main strong{
+  font-size:.92rem;
+}
+body[data-route="trebnik"] .trebnik-profile-link .trebnik-card__chips em{
+  padding:2px 6px;
+  font-size:.74rem;
+}
+body[data-route="trebnik"] .trebnik-profile-link__actions .primary,
+body[data-route="trebnik"] .trebnik-profile-link__actions .plain,
+body[data-route="trebnik"] .trebnik-profile-link__actions .secondary{
+  min-height:30px;
+  padding:0 10px;
+  border-radius:8px;
+}
+
+/* Дела: финальная плотная сетка после всех базовых правил. */
+@media (min-width:921px){
+  body[data-route="trebnik"][data-trebnik-page="actions"] main{
+    height:calc(100svh - 80px);
+    min-height:0;
+    padding-top:10px;
+    padding-bottom:10px;
+    overflow:hidden;
+  }
+  body[data-route="trebnik"][data-trebnik-page="actions"] .admin-trebnik{
+    height:100%;
+    min-height:0;
+    grid-template-rows:auto minmax(0,1fr);
+  }
+  body[data-route="trebnik"] .trebnik-action-board{
+    height:100%;
+    min-height:0;
+    gap:5px;
+    align-content:start;
+    overflow-y:auto;
+    overflow-x:hidden;
+    padding-right:3px;
+  }
+  body[data-route="trebnik"] .trebnik-action-section{
+    border-radius:6px;
+    background:rgba(4,20,17,.48);
+    overflow:visible!important;
+  }
+  body[data-route="trebnik"] .trebnik-action-section__rows{
+    overflow:visible!important;
+  }
+  body[data-route="trebnik"] .trebnik-action-section__head{
+    min-height:28px;
+    padding:0 9px;
+  }
+  body[data-route="trebnik"] .trebnik-action-section__head h2{
+    font-size:.94rem;
+  }
+  body[data-route="trebnik"] .trebnik-action-section__head span{
+    min-width:18px;
+    min-height:18px;
+    font-size:.68rem;
+  }
+  body[data-route="trebnik"] .trebnik-action-section .admin-action-line{
+    min-height:36px!important;
+    padding:0 7px!important;
+    content-visibility:visible!important;
+    contain-intrinsic-size:auto!important;
+  }
+  body[data-route="trebnik"] .trebnik-action-section .admin-work-line{
+    min-height:39px!important;
+    grid-template-columns:minmax(0,1fr) 116px!important;
+    gap:7px!important;
+  }
+  body[data-route="trebnik"] .trebnik-action-section .admin-work-line .admin-action-open{
+    grid-template-columns:18px minmax(120px,200px) minmax(150px,260px) minmax(220px,480px) minmax(150px,180px)!important;
+    justify-content:start!important;
+    gap:7px!important;
+  }
+  body[data-route="trebnik"] .trebnik-action-section .admin-work-line .trebnik-work-dot{
+    width:14px!important;
+    height:14px!important;
+  }
+  body[data-route="trebnik"] .trebnik-action-section .admin-update-row .trebnik-update-dot{
+    width:14px!important;
+    height:14px!important;
+    opacity:0!important;
+  }
+  body[data-route="trebnik"] .trebnik-action-section .admin-work-line .admin-action-open strong,
+  body[data-route="trebnik"] .trebnik-action-section .admin-work-title{
+    font-size:.8rem!important;
+    line-height:1.14!important;
+  }
+  body[data-route="trebnik"] .trebnik-action-section .admin-update-target{
+    color:var(--gold-2)!important;
+    text-transform:none!important;
+  }
+  body[data-route="trebnik"] .trebnik-action-section .admin-work-note{
+    width:100%!important;
+    max-width:480px!important;
+    padding:0 0 0 7px!important;
+    border-left:1px solid rgba(240,206,118,.34)!important;
+    border-radius:0!important;
+    background:transparent!important;
+    color:var(--muted)!important;
+    font-size:.73rem!important;
+    line-height:1.15!important;
+  }
+  body[data-route="trebnik"] .trebnik-action-section .admin-work-status{
+    justify-content:flex-end!important;
+    min-width:0;
+  }
+  body[data-route="trebnik"] .trebnik-action-section .admin-work-status span{
+    min-height:0!important;
+    max-width:100%;
+    padding:0!important;
+    border:0!important;
+    border-radius:0!important;
+    background:transparent!important;
+    gap:5px!important;
+    font-size:.72rem!important;
+  }
+  body[data-route="trebnik"] .trebnik-action-section .admin-work-status em,
+  body[data-route="trebnik"] .trebnik-action-section .admin-work-status b{
+    font-size:.72rem!important;
+  }
+  body[data-route="trebnik"] .trebnik-action-section .admin-work-status em{
+    display:none!important;
+  }
+  body[data-route="trebnik"] .trebnik-action-section .admin-work-line .admin-action-buttons{
+    width:116px!important;
+    min-width:116px!important;
+    gap:5px!important;
+  }
+  body[data-route="trebnik"] .trebnik-action-section .admin-action-buttons .plain{
+    width:auto!important;
+    min-height:26px!important;
+    padding:0 7px!important;
+    border-radius:6px!important;
+    font-size:.72rem!important;
+  }
+  body[data-route="trebnik"] .trebnik-action-section .trebnik-work-log-icon{
+    width:26px!important;
+    min-width:26px!important;
+    height:26px!important;
+    min-height:26px!important;
+    padding:0!important;
+    border-radius:6px!important;
+  }
+  body[data-route="trebnik"] .trebnik-action-section .admin-queue-line{
+    min-height:36px!important;
+    grid-template-columns:minmax(0,1fr) auto!important;
+    gap:7px!important;
+  }
+  body[data-route="trebnik"] .trebnik-action-section .admin-queue-line .admin-action-open{
+    min-width:0;
+    display:grid!important;
+    grid-template-columns:minmax(130px,240px) minmax(180px,680px)!important;
+    justify-content:start!important;
+    align-items:center;
+    gap:9px!important;
+  }
+  body[data-route="trebnik"] .trebnik-action-section .admin-queue-line .admin-action-open strong,
+  body[data-route="trebnik"] .trebnik-action-section .admin-queue-line>strong{
+    font-size:.78rem!important;
+  }
+  body[data-route="trebnik"] .trebnik-action-section .admin-action-meta,
+  body[data-route="trebnik"] .trebnik-action-section .admin-action-meta span{
+    font-size:.72rem!important;
+  }
+  body[data-route="trebnik"] .trebnik-action-section .admin-action-meta{
+    min-width:0;
+    max-width:680px!important;
+    display:flex!important;
+    align-items:center;
+    justify-content:flex-start;
+    gap:8px!important;
+    color:var(--muted)!important;
+  }
+  body[data-route="trebnik"] .trebnik-action-section .admin-action-meta span{
+    min-width:0;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+  }
+  body[data-route="trebnik"] .trebnik-action-section .admin-action-meta span:first-child{
+    flex:1 1 auto;
+  }
+  body[data-route="trebnik"] .trebnik-action-section .admin-action-buttons{
+    display:flex!important;
+    align-items:center;
+    justify-content:flex-end;
+    gap:5px!important;
+  }
+  body[data-route="trebnik"] .trebnik-action-section .admin-update-line{
+    background:transparent!important;
+    border-color:rgba(240,206,118,.1)!important;
+  }
+  body[data-route="trebnik"] .trebnik-action-section .admin-update-line.is-new{
+    background:rgba(255,255,255,.018)!important;
+    border-color:rgba(240,206,118,.14)!important;
+  }
+  body[data-route="trebnik"] .trebnik-action-section .admin-update-line .admin-action-buttons{
+    min-width:154px!important;
+  }
+}
+
+@media (max-width:760px){
+  body[data-route="trebnik"] .trebnik-client-overview-metrics{
+    grid-template-columns:1fr 1fr;
+  }
+  body[data-route="trebnik"] .trebnik-client-overview-row{
+    grid-template-columns:1fr;
+  }
+}
+
+/* Единая компактная размерность Требника. */
+body[data-route="trebnik"] .admin-trebnik :where(.primary,.secondary,.danger),
+body[data-route="trebnik"] .client-cabinet :where(.primary,.secondary,.danger,.plain){
+  min-height:32px;
+  padding:0 10px;
+  border-radius:8px;
+  font-size:.86rem;
+  line-height:1;
+}
+
+body[data-route="trebnik"] .trebnik-clients-overview{
+  height:100%;
+  min-height:0;
+  display:grid;
+  grid-template-rows:auto auto minmax(0,1fr);
+  gap:9px;
+  padding:12px;
+  border-radius:10px;
+  background:rgba(3,17,14,.38);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.025);
+}
+body[data-route="trebnik"] .trebnik-clients-overview.is-empty{
+  display:block;
+  padding:0;
+  border:0;
+  background:transparent;
+  box-shadow:none;
+}
+body[data-route="trebnik"] .trebnik-clients-overview header{
+  min-height:34px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+}
+body[data-route="trebnik"] .trebnik-clients-overview h2{
+  font-size:1.2rem;
+  line-height:1.05;
+}
+body[data-route="trebnik"] .trebnik-client-overview-stats{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:7px;
+}
+body[data-route="trebnik"] .trebnik-client-overview-stats span{
+  min-width:0;
+  min-height:42px;
+  display:grid;
+  align-content:center;
+  gap:3px;
+  padding:7px 9px;
+  border:1px solid rgba(240,206,118,.13);
+  border-radius:8px;
+  background:rgba(255,255,255,.018);
+}
+body[data-route="trebnik"] .trebnik-client-overview-stats b{
+  min-width:0;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  color:var(--gold-2);
+  font-size:1rem;
+  line-height:1;
+}
+body[data-route="trebnik"] .trebnik-client-overview-stats em{
+  color:var(--muted);
+  font-size:.74rem;
+  font-style:normal;
+}
+body[data-route="trebnik"] .trebnik-client-overview-columns{
+  min-height:0;
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:9px;
+}
+body[data-route="trebnik"] .trebnik-client-overview-list{
+  min-height:0;
+  display:grid;
+  grid-template-rows:auto minmax(0,1fr);
+  gap:6px;
+  padding:10px;
+  border:1px solid rgba(240,206,118,.12);
+  border-radius:9px;
+  background:rgba(5,20,17,.26);
+}
+body[data-route="trebnik"] .trebnik-client-overview-list h3{
+  font-family:var(--sans);
+  color:var(--ink);
+  font-size:.9rem;
+  font-weight:800;
+  line-height:1.05;
+}
+body[data-route="trebnik"] .trebnik-client-overview-list>div{
+  min-height:0;
+  display:grid;
+  align-content:start;
+  gap:5px;
+  overflow:auto;
+  scrollbar-width:thin;
+}
+body[data-route="trebnik"] .trebnik-client-overview-row{
+  min-height:38px;
+  grid-template-columns:minmax(0,1fr) minmax(120px,.38fr);
+  gap:8px;
+  padding:7px 9px;
+  border-radius:8px;
+}
+body[data-route="trebnik"] .trebnik-client-overview-row strong{
+  font-size:.88rem;
+}
+body[data-route="trebnik"] .trebnik-client-overview-row span{
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  font-size:.76rem;
+  text-align:right;
+}
+
+body[data-route="trebnik"] .client-cabinet{
+  width:100%;
+  height:auto;
+  min-height:0;
+  display:grid;
+  grid-template-rows:auto auto;
+  gap:7px;
+}
+body[data-route="trebnik"] .client-cabinet-topbar{
+  min-height:48px;
+  display:grid;
+  align-items:center;
+}
+body[data-route="trebnik"] .client-cabinet-map{
+  width:100%;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);
+  align-items:center;
+  gap:18px;
+  margin:0;
+  padding:0;
+  border:0;
+  background:transparent;
+}
+body[data-route="trebnik"] .client-cabinet-shell{
+  min-height:0;
+  display:grid;
+  grid-template-columns:minmax(0,1fr);
+  gap:8px;
+  padding:10px 12px 12px;
+  border:1px solid rgba(240,206,118,.22);
+  border-radius:12px;
+  background:linear-gradient(180deg,rgba(3,17,14,.62),rgba(3,11,10,.48));
+  overflow:visible;
+}
+body[data-route="trebnik"] .client-cabinet .trebnik-nav-title::before,
+body[data-route="trebnik"] .client-cabinet .trebnik-nav-title::after,
+body[data-route="trebnik"] .client-cabinet-title::before,
+body[data-route="trebnik"] .client-cabinet-title::after{
+  display:none!important;
+}
+body[data-route="trebnik"] .client-cabinet-workspace{
+  height:auto;
+  min-height:0;
+  display:grid;
+  grid-template-rows:auto auto;
+  padding:0;
+  border:0;
+  background:transparent;
+  overflow:visible;
+}
+body[data-route="trebnik"] .client-cabinet-workspace .trebnik-client-head{
+  padding:2px 0 8px;
+  border-bottom:0;
+}
+body[data-route="trebnik"] .client-cabinet-workspace .trebnik-client-tab{
+  min-height:0;
+  overflow:visible;
+  padding-right:3px;
+}
+body[data-route="trebnik"] .client-cabinet.is-client-now .client-cabinet-shell,
+body[data-route="trebnik"] .client-cabinet.is-client-services .client-cabinet-shell,
+body[data-route="trebnik"] .client-cabinet.is-client-payments .client-cabinet-shell{
+  padding:0;
+  border:0;
+  border-radius:0;
+  background:transparent;
+}
+@media (min-width:921px){
+  body[data-route="trebnik"] .client-cabinet.is-client-requests{
+    height:100%;
+    grid-template-rows:auto minmax(0,1fr);
+    align-content:stretch;
+  }
+  body[data-route="trebnik"] .client-cabinet.is-client-requests .client-cabinet-shell{
+    height:100%;
+    min-height:0;
+    display:grid;
+    grid-template-rows:minmax(0,1fr);
+    overflow:hidden;
+  }
+  body[data-route="trebnik"] .client-cabinet.is-client-requests .client-cabinet-workspace{
+    height:100%;
+    min-height:0;
+    grid-template-rows:auto minmax(0,1fr);
+    overflow:hidden;
+  }
+  body[data-route="trebnik"] .client-cabinet.is-client-requests .trebnik-client-tab{
+    height:100%;
+    min-height:0;
+    overflow:hidden;
+    padding:10px 12px 14px;
+  }
+  body[data-route="trebnik"] .client-cabinet.is-client-services{
+    height:auto;
+    grid-template-rows:auto auto;
+    align-content:start;
+  }
+  body[data-route="trebnik"] .client-cabinet.is-client-services .client-cabinet-shell,
+  body[data-route="trebnik"] .client-cabinet.is-client-services .client-cabinet-workspace{
+    height:auto;
+    min-height:0;
+    overflow:visible;
+  }
+  body[data-route="trebnik"] .client-cabinet.is-client-services .trebnik-client-tab{
+    height:auto;
+    min-height:0;
+    overflow:visible;
+    padding:6px 0 0;
+  }
+  body[data-route="trebnik"] .client-cabinet.is-client-payments{
+    height:auto;
+    grid-template-rows:auto auto;
+    align-content:start;
+  }
+  body[data-route="trebnik"] .client-cabinet.is-client-payments .client-cabinet-shell,
+  body[data-route="trebnik"] .client-cabinet.is-client-payments .client-cabinet-workspace{
+    height:auto;
+    min-height:0;
+    overflow:visible;
+  }
+  body[data-route="trebnik"] .client-cabinet.is-client-payments .trebnik-client-tab{
+    height:auto;
+    min-height:0;
+    overflow:visible;
+    padding:6px 0 0;
+    scrollbar-width:auto;
+  }
+  body[data-route="trebnik"] .client-cabinet.is-client-requests .trebnik-request-workbench{
+    height:100%;
+    min-height:0;
+  }
+  body[data-route="trebnik"] .client-cabinet.is-client-requests .trebnik-request-master,
+  body[data-route="trebnik"] .client-cabinet.is-client-requests .trebnik-request-detail-pane{
+    min-height:0;
+    max-height:100%;
+    overflow:auto;
+    scrollbar-width:thin;
+  }
+  body[data-route="trebnik"] .client-cabinet.is-client-services .trebnik-request-workbench,
+  body[data-route="trebnik"] .client-cabinet.is-client-services .trebnik-request-master,
+  body[data-route="trebnik"] .client-cabinet.is-client-services .trebnik-request-detail-pane{
+    height:auto;
+    max-height:none;
+    overflow:visible;
+  }
+  body[data-route="trebnik"] .client-cabinet.is-client-services .trebnik-request-workbench{
+    align-items:start;
+    grid-template-columns:minmax(230px,300px) minmax(0,1fr);
+    gap:12px;
+  }
+  body[data-route="trebnik"] .client-cabinet.is-client-payments .trebnik-finance{
+    height:auto;
+    min-height:0;
+    overflow:visible;
+  }
+  body[data-route="trebnik"] .client-cabinet.is-client-payments .finance-cockpit,
+  body[data-route="trebnik"] .client-cabinet.is-client-payments .finance-action-center{
+    height:auto;
+    min-height:0;
+    overflow:visible;
+  }
+  body[data-route="trebnik"] .client-cabinet.is-client-payments .finance-action-list{
+    max-height:none;
+    min-height:0;
+    overflow:visible;
+  }
+}
+body[data-route="trebnik"] .client-cabinet-list{
+  align-content:start;
+}
+body[data-route="trebnik"] .client-cabinet-update-grid{
+  min-height:0;
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:10px;
+}
+body[data-route="trebnik"] .client-cabinet-update-grid .dlist{
+  min-width:0;
+  align-content:start;
+}
+body[data-route="trebnik"] .client-cabinet-update-grid .dlist h3,
+body[data-route="trebnik"] .client-detail-grid .dlist h3{
+  font-family:var(--sans);
+  color:var(--gold-2);
+  font-size:.86rem;
+  font-weight:800;
+}
+body[data-route="trebnik"] .client-cabinet-stats{
+  min-height:0;
+  display:grid;
+  grid-template-columns:1fr;
+  align-content:start;
+  gap:6px;
+}
+body[data-route="trebnik"] .client-cabinet-stats.is-payment{
+  grid-template-columns:repeat(2,minmax(0,1fr));
+}
+body[data-route="trebnik"] .client-cabinet-stats span{
+  min-width:0;
+  min-height:38px;
+  display:grid;
+  align-content:center;
+  gap:3px;
+  padding:7px 9px;
+  border:1px solid rgba(240,206,118,.12);
+  border-radius:8px;
+  background:rgba(255,255,255,.018);
+}
+body[data-route="trebnik"] .client-cabinet-stats b{
+  min-width:0;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  color:var(--gold-2);
+  font-size:.98rem;
+  line-height:1;
+}
+body[data-route="trebnik"] .client-cabinet-stats em{
+  color:var(--muted);
+  font-size:.72rem;
+  font-style:normal;
+}
+body[data-route="trebnik"] .client-history{
+  display:grid;
+  gap:0;
+  align-content:start;
+  margin-top:0;
+  border-top:1px solid rgba(240,206,118,.08);
+}
+body[data-route="trebnik"] .client-history>div{
+  content-visibility:visible;
+  contain:none;
+  contain-intrinsic-size:auto;
+  min-height:42px;
+  padding:7px 0;
+  border:0;
+  border-bottom:1px solid rgba(240,206,118,.08);
+  border-radius:0;
+  background:transparent;
+}
+body[data-route="trebnik"] .client-history strong{
+  font-size:.86rem;
+}
+body[data-route="trebnik"] .client-history em,
+body[data-route="trebnik"] .client-history p{
+  color:var(--muted);
+  font-size:.78rem;
+}
+body[data-route="trebnik"] .client-home-dashboard{
+  width:100%;
+  gap:0;
+}
+body[data-route="trebnik"] .client-news-feed{
+  width:100%;
+  min-width:0;
+  display:grid;
+  grid-template-columns:minmax(0,1fr);
+  gap:8px;
+  border-top:0;
+}
+body[data-route="trebnik"] .client-news-feed>.trebnik-section-head{
+  grid-column:1/-1;
+}
+body[data-route="trebnik"] .client-news-card{
+  content-visibility:visible;
+  contain:none;
+  contain-intrinsic-size:auto;
+  min-height:58px;
+}
+body[data-route="trebnik"] .client-news-card__main{
+  gap:5px;
+}
+body[data-route="trebnik"] .client-news-card__main span{
+  display:block;
+  color:var(--muted);
+  font-size:.86rem;
+  line-height:1.35;
+}
+body[data-route="trebnik"] .client-news-card__side{
+  max-width:220px;
+}
+body[data-route="trebnik"] .client-news-card__side .plain,
+body[data-route="trebnik"] .client-news-card__side .secondary{
+  min-height:34px;
+  padding:0 10px;
+  border-radius:10px;
+}
+body[data-route="trebnik"] .client-news-card.is-action .client-news-card__main span,
+body[data-route="trebnik"] .client-news-card.is-new .client-news-card__main span{
+  color:var(--gold);
+}
+body[data-route="trebnik"] .client-news-card.is-good .client-news-card__main span{
+  color:#d3f0cd;
+}
+body[data-route="trebnik"] .client-news-card.is-alert .client-news-card__main span{
+  color:#ffd6ca;
+}
+body[data-route="trebnik"] .client-next-actions,
+body[data-route="trebnik"] .client-active-requests,
+body[data-route="trebnik"] .client-recent-updates{
+  min-width:0;
+  padding:0;
+}
+body[data-route="trebnik"] .client-next-actions .client-action-row{
+  content-visibility:visible;
+  contain:none;
+  contain-intrinsic-size:auto;
+  min-height:46px;
+  padding:8px 0;
+}
+body[data-route="trebnik"] .client-next-actions .client-action-row__actions .secondary{
+  min-height:34px;
+}
+body[data-route="trebnik"] .client-active-requests .client-brief-row{
+  content-visibility:visible;
+  contain:none;
+  contain-intrinsic-size:auto;
+  min-height:46px;
+  margin-top:0;
+  padding:8px 0;
+  border:0;
+  border-bottom:1px solid rgba(240,206,118,.08);
+  border-radius:0;
+  background:transparent;
+}
+body[data-route="trebnik"] .client-recent-updates{
+  max-width:none;
+}
+body[data-route="trebnik"] .client-recent-updates>div{
+  min-height:0;
+}
+body[data-route="trebnik"] .client-recent-updates p{
+  margin-top:3px;
+  line-height:1.42;
+}
+
+@media (max-width:920px){
+  body[data-route="trebnik"] .trebnik-client-overview-columns,
+  body[data-route="trebnik"] .client-cabinet-shell,
+  body[data-route="trebnik"] .client-cabinet-update-grid{
+    grid-template-columns:1fr;
+  }
+  body[data-route="trebnik"] .client-cabinet-stats{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+  body[data-route="trebnik"] .client-news-card{
+    grid-template-columns:1fr;
+  }
+  body[data-route="trebnik"] .client-news-feed{
+    grid-template-columns:1fr;
+  }
+  body[data-route="trebnik"] .client-news-card__main{
+    grid-template-columns:1fr;
+    gap:3px;
+  }
+  body[data-route="trebnik"] .client-news-card__side{
+    display:flex;
+  }
+  body[data-route="trebnik"] .client-news-card__side{
+    justify-content:flex-start;
+    flex-wrap:wrap;
+  }
+}
+
+@media (max-width:760px){
+  body[data-route="trebnik"] .trebnik-client-overview-stats,
+  body[data-route="trebnik"] .client-cabinet-stats,
+  body[data-route="trebnik"] .client-cabinet-stats.is-payment{
+    grid-template-columns:1fr 1fr;
+  }
+  body[data-route="trebnik"] .trebnik-client-overview-row{
+    grid-template-columns:1fr;
+  }
+  body[data-route="trebnik"] .trebnik-client-overview-row span{
+    text-align:left;
+  }
+}
+
+@media (min-width:921px){
+  body[data-route="trebnik"]:has(.admin-trebnik.is-client-cabinet):not(:has(.admin-trebnik.is-client-cabinet .trebnik-request-workbench)){
+    overflow:auto;
+  }
+  body[data-route="trebnik"]:has(.admin-trebnik.is-client-cabinet):not(:has(.admin-trebnik.is-client-cabinet .trebnik-request-workbench)) .shell,
+  body[data-route="trebnik"]:has(.admin-trebnik.is-client-cabinet):not(:has(.admin-trebnik.is-client-cabinet .trebnik-request-workbench)) main{
+    height:auto;
+    overflow:visible;
+  }
+  body[data-route="trebnik"]:has(.admin-trebnik.is-client-cabinet):not(:has(.admin-trebnik.is-client-cabinet .trebnik-request-workbench)) main{
+    min-height:calc(100svh - 80px);
+  }
+  body[data-route="trebnik"] .admin-trebnik.is-client-cabinet:not(:has(.trebnik-request-workbench)){
+    height:auto;
+    align-content:start;
+    grid-template-rows:auto auto;
+  }
+}
+
+body[data-route="trebnik"] .admin-trebnik.is-client-cabinet .trebnik-request-detail-pane{
+  scrollbar-gutter:stable;
+}
+body[data-route="trebnik"] .admin-trebnik.is-client-cabinet .trebnik-request-ledger.is-client-money{
+  display:grid!important;
+  grid-template-columns:repeat(auto-fit,minmax(150px,1fr))!important;
+  gap:8px!important;
+  padding:0 0 8px!important;
+  border-bottom:1px solid rgba(240,206,118,.1)!important;
+}
+body[data-route="trebnik"] .admin-trebnik.is-client-cabinet .trebnik-request-ledger.is-client-money span{
+  min-height:34px!important;
+  display:flex!important;
+  grid-template-columns:none!important;
+  align-items:center!important;
+  justify-content:space-between!important;
+  gap:8px!important;
+  padding:0 10px!important;
+  margin:0!important;
+  border:1px solid rgba(240,206,118,.14)!important;
+  border-radius:8px!important;
+  background:rgba(6,23,19,.48)!important;
+}
+body[data-route="trebnik"] .admin-trebnik.is-client-cabinet .trebnik-request-ledger.is-client-money em,
+body[data-route="trebnik"] .admin-trebnik.is-client-cabinet .trebnik-request-ledger.is-client-money strong{
+  min-width:0!important;
+  grid-column:auto!important;
+  white-space:nowrap!important;
+  line-height:1!important;
+}
+body[data-route="trebnik"] .admin-trebnik.is-client-cabinet .trebnik-request-ledger.is-client-money em{
+  color:var(--muted)!important;
+  font-size:.76rem!important;
+}
+body[data-route="trebnik"] .admin-trebnik.is-client-cabinet .trebnik-request-ledger.is-client-money strong{
+  overflow:hidden!important;
+  text-overflow:ellipsis!important;
+  font-size:.92rem!important;
+}
+body[data-route="trebnik"] .admin-trebnik.is-client-cabinet .trebnik-inline-empty{
+  min-height:0!important;
+  display:block!important;
+  place-items:initial!important;
+  padding:9px 0!important;
+  border:0!important;
+  border-bottom:1px solid rgba(240,206,118,.08)!important;
+  border-radius:0!important;
+  background:transparent!important;
+  color:var(--muted)!important;
+  text-align:left!important;
+}
+body[data-route="trebnik"] .admin-trebnik.is-client-cabinet .trebnik-request-section__head:has(> span:empty){
+  justify-content:flex-end;
+}
+body[data-route="trebnik"] .admin-trebnik.is-client-cabinet .trebnik-inline-row.is-client-update,
+body[data-route="trebnik"] .admin-trebnik.is-client-cabinet .trebnik-inline-row.is-client-payment{
+  min-height:44px;
+  grid-template-columns:minmax(0,1fr) auto;
+  align-items:center;
+}
+body[data-route="trebnik"] .admin-trebnik.is-client-cabinet .trebnik-inline-row.is-client-update .trebnik-inline-open,
+body[data-route="trebnik"] .admin-trebnik.is-client-cabinet .trebnik-inline-row.is-client-payment .trebnik-inline-open{
+  width:100%;
+  display:block;
+  border-radius:6px;
+  cursor:pointer;
+  font:inherit;
+  line-height:inherit;
+}
+body[data-route="trebnik"] .admin-trebnik.is-client-cabinet .trebnik-inline-row.is-client-update .trebnik-inline-open:focus-visible,
+body[data-route="trebnik"] .admin-trebnik.is-client-cabinet .trebnik-inline-row.is-client-payment .trebnik-inline-open:focus-visible{
+  outline:1px solid rgba(240,206,118,.6);
+  outline-offset:3px;
+}
+body[data-route="trebnik"] .admin-trebnik.is-client-cabinet .trebnik-inline-row.is-client-update .trebnik-inline-open:hover strong,
+body[data-route="trebnik"] .admin-trebnik.is-client-cabinet .trebnik-inline-row.is-client-payment .trebnik-inline-open:hover strong{
+  color:var(--gold-2);
+}
+body[data-route="trebnik"] .admin-trebnik.is-client-cabinet .trebnik-inline-row.is-client-update span,
+body[data-route="trebnik"] .admin-trebnik.is-client-cabinet .trebnik-inline-row.is-client-payment span{
+  white-space:normal;
+  overflow:hidden;
+  text-overflow:clip;
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:2;
+}
+body[data-route="trebnik"] .client-request-full-text{
+  white-space:pre-wrap;
+  color:var(--ink);
+  font-size:1rem;
+  line-height:1.55;
+}
+body[data-route="trebnik"] .client-request-payment-total{
+  min-height:36px;
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:0 12px;
+  border:1px solid rgba(240,206,118,.16);
+  border-radius:8px;
+  background:rgba(6,23,19,.5);
+}
+body[data-route="trebnik"] .client-request-payment-total em{
+  color:var(--muted);
+  font-style:normal;
+}
+body[data-route="trebnik"] .client-request-payment-total strong{
+  color:var(--ink);
+}
+body[data-route="trebnik"] .client-finance .finance-action-card.is-good::before{
+  background:rgba(142,208,143,.58);
+}
+body[data-route="trebnik"] .client-finance .finance-action-card.is-good .finance-action-state span{
+  color:var(--finance-green);
+}
+body[data-route="trebnik"] .client-finance .finance-action-buttons:empty{
+  display:none;
+}
+body[data-route="trebnik"] .client-finance .finance-client-link,
+body[data-route="trebnik"] .client-finance .finance-target-link,
+body[data-route="trebnik"] .client-finance .finance-action-main span{
+  white-space:normal;
+  overflow:visible;
+  text-overflow:clip;
+  overflow-wrap:anywhere;
+}
+
+/* Клиентский кабинет: без служебных точек/галочек у работ. */
+body[data-route="trebnik"] .client-cabinet .client-main-work .trebnik-work-dot,
+body[data-route="trebnik"] .client-cabinet .client-main-work .trebnik-work-dot::after,
+body[data-route="trebnik"] .client-cabinet .client-current-work .trebnik-work-dot,
+body[data-route="trebnik"] .client-cabinet .client-current-work .trebnik-work-dot::after{
+  display:none!important;
+  content:none!important;
+}
+body[data-route="trebnik"] .client-cabinet .client-current-work{
+  grid-template-columns:minmax(0,1fr) auto!important;
+  padding-left:10px;
+}
+
+/* Админский Требник: общий верхний край шапки во всех соседних разделах. */
+@media (min-width:921px){
+  body[data-route="trebnik"][data-trebnik-page="actions"] main,
+  body[data-route="trebnik"][data-trebnik-page="clients"] main,
+  body[data-route="trebnik"][data-trebnik-page="services"] main,
+  body[data-route="trebnik"][data-trebnik-page="payments"] main{
+    padding-top:10px;
+  }
+  body[data-route="trebnik"][data-trebnik-page="actions"] .admin-trebnik,
+  body[data-route="trebnik"][data-trebnik-page="clients"] .admin-trebnik,
+  body[data-route="trebnik"][data-trebnik-page="services"] .admin-trebnik,
+  body[data-route="trebnik"][data-trebnik-page="payments"] .admin-trebnik{
+    grid-template-rows:auto minmax(0,1fr);
+    gap:7px;
+  }
+  body[data-route="trebnik"][data-trebnik-page="actions"] .admin-trebnik__topbar,
+  body[data-route="trebnik"][data-trebnik-page="clients"] .admin-trebnik__topbar,
+  body[data-route="trebnik"][data-trebnik-page="services"] .admin-trebnik__topbar,
+  body[data-route="trebnik"][data-trebnik-page="payments"] .admin-trebnik__topbar{
+    min-height:48px;
+    margin:0;
+    transform:none;
+  }
+}
+
+/* Стабильная первичная высота: эти блоки не должны пересчитываться позже. */
+.content-card,
+.client-card,
+.admin-card,
+.inquiry-card,
+.update,
+.action-line,
+.dlist>div,
+.modal-card,
+.modal-body{
+  content-visibility:visible;
+  contain-intrinsic-size:auto;
+}
+.content-card-media,
+.material-cover,
+.material-body-image{
+  aspect-ratio:var(--image-ratio, 16/10);
+}
+.hero-image,
+.card-image,
+.media-preview-image,
+.material-body-image img{
+  aspect-ratio:var(--image-ratio, auto);
+}
+.modal-card[data-modal-kind="trebnik-detail"] .modal-body,
+.modal-card[data-modal-kind="work-editor"] .modal-body,
+.modal-card[data-modal-kind="request-editor"] .modal-body,
+.modal-card[data-modal-kind="service-editor"] .modal-body,
+.modal-card[data-modal-kind="client-service-detail"] .modal-body,
+.modal-card[data-modal-kind="client-notifications"] .modal-body,
+.modal-card[data-modal-kind="payment-receipt"] .modal-body{
+  min-height:min(58vh, 560px);
+}
+.modal-card[data-modal-kind="trebnik-update-detail"] .modal-body{
+  min-height:0;
+}
+.modal-card[data-modal-kind="service-editor"] .modal-body,
+.modal-card[data-modal-kind="service-create"] .modal-body,
+.modal-card[data-modal-kind="service-detail"] .modal-body{
+  min-height:0;
+}
+.modal-card[data-modal-kind="payment-reminder-send"] .modal-body{
+  min-height:0;
+}
+.modal-card.compact .modal-body{
+  min-height:min(42vh, 360px);
+}

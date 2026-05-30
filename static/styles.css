@@ -1,0 +1,20 @@
+/*
+  Стили сайта подключаются прямыми ссылками из HTML, без цепочки @import.
+  Текущий порядок:
+  /static/styles_modules/00-base.css?v=material-page-compact-20260516-5
+  /static/styles_modules/01-layout.css?v=site-header-desktop-tight-20260519-1
+  /static/styles_modules/02-components-forms-modals-auth.css?v=profile-profile-audit-20260522-12
+  /static/styles_modules/03-public-pages.css?v=home-hero-hover-20260522-1
+  /static/styles_modules/04-content-admin.css?v=styles-split-20260504-1
+  /static/styles_modules/05-admin-trebnik-actions.css?v=trebnik-smart-notices-20260510-1
+  /static/styles_modules/06-content-editor.css?v=image-full-viewer-20260517-1
+  /static/styles_modules/07-client-cabinet.css?v=update-modal-adaptive-20260527-1
+  /static/styles_modules/08-admin-trebnik.css?v=trebnik-finance-scroll-20260511-1
+  /static/styles_modules/09-admin-trebnik-clients.css?v=trebnik-admin-header-unified-20260521-3
+  /static/styles_modules/10-responsive.css?v=trebnik-admin-header-unified-20260521-3
+  /static/styles_modules/11-admin-finance.css?v=trebnik-finance-scroll-20260511-1
+  /static/styles_modules/12-admin-services.css?v=update-modal-adaptive-20260527-1
+  /static/styles_modules/13-trebnik-stability.css?v=trebnik-admin-header-unified-20260521-3
+  Предыдущая версия: /static/styles_modules/13-trebnik-stability.css?v=client-payment-meta-dedupe-20260513-1
+  /static/styles_modules/14-mobile-complete.css?v=client-mobile-tabs-grid-20260527-2
+*/
