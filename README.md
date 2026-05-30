@@ -17,6 +17,13 @@ map, and no production history.
 - optional bridge hooks for private back-office systems
 - vendored Editor.js browser assets with their license files
 
+## Maintenance
+
+- [MAINTAINERS.md](MAINTAINERS.md) names the primary maintainer and safety expectations.
+- [ROADMAP.md](ROADMAP.md) tracks upcoming public work.
+- [docs/RELEASE_PROCESS.md](docs/RELEASE_PROCESS.md) describes the release checklist.
+- [SECURITY.md](SECURITY.md) explains how to report vulnerabilities safely.
+
 ## What is intentionally not inside
 
 - production databases
